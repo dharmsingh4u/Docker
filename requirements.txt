@@ -245,7 +245,6 @@ python-multipart==0.0.20
 python-ulid==3.1.0
 pytube==15.0.0
 pytz==2025.2
-pywin32==311
 PyYAML==6.0.3
 pyzmq==27.1.0
 qdrant-client==1.15.1
