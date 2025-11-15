@@ -7,6 +7,8 @@ from langchain_core.prompts import PromptTemplate,ChatPromptTemplate
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 import os 
 model =ChatOpenAI()
+import dotenv
+dotenv.load_dotenv()
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.vectorstores import Chroma,FAISS
