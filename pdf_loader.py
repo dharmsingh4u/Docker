@@ -6,7 +6,6 @@ from langchain_core.prompts import PromptTemplate,ChatPromptTemplate
 #from enviorment import load_env
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 import os 
-load_env()
 model =ChatOpenAI()
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.document_loaders import PyPDFLoader
