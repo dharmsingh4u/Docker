@@ -16,8 +16,7 @@ import sys
 from langgraph.prebuilt import ToolNode,tools_condition
 from langchain_core.tools import tool
 #from pydirectoryloader import rag_function
-import os 
-load_env()
+import os
 from pdf_loader import loader
 from langchain_core.runnables import RunnableParallel, RunnablePassthrough, RunnableLambda
 from langchain_core.output_parsers import StrOutputParser
