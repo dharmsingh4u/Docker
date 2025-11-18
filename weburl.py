@@ -25,7 +25,7 @@ from urllib.parse import urljoin, urlparse
 import time
 from pydantic import BaseModel,Field
 def get_ruls(start_url,max_urls):
-
+ 
 # A set to store unique URLs we have visited
     visited_urls = set()
     # A queue (list) to store URLs we still need to visit
@@ -111,4 +111,5 @@ def retriver_questions(result):
     #result=retriever.invoke(question)
     context_text= "\n".join([doc.page_content for doc in result])
     return context_text
+
 
