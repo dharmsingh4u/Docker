@@ -6,7 +6,6 @@ from langchain_core.prompts import PromptTemplate,ChatPromptTemplate
 #from enviorment import load_env
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 import os 
-load_env()
 model =ChatOpenAI()
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.document_loaders import PyPDFLoader
@@ -20,3 +19,4 @@ def loader(path):
     db = FAISS.from_documents(documents,OpenAIEmbeddings())
     retriever=db.as_retriever(search_type='similarity',search_kwargs={"k":4})
     return retriever
+
