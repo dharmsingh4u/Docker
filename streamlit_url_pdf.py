@@ -2,6 +2,8 @@ import streamlit as st
 import requests
 import tempfile
 import os
+import dotenv
+dotenv.load_dotenv()
 # You may need a library like 'pdfplumber' or 'PyPDF2' to process the PDF content
 # pip install pdfplumber 
 import pdfplumber 
@@ -183,4 +185,5 @@ elif input and st.session_state['pdf_uploaded']==1:
      
 
      
+
 
