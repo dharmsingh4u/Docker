@@ -16,8 +16,7 @@ from langgraph.prebuilt import ToolNode,tools_condition
 from langchain_core.tools import tool
 #from pydirectoryloader import rag_function
 from langchain_community.document_loaders.firecrawl import FireCrawlLoader
-import os 
-load_env()
+import os
 from langchain_community.document_loaders import WebBaseLoader
 from langchain_core.runnables import RunnableSequence, RunnableParallel,RunnablePassthrough
 import requests
@@ -112,3 +111,4 @@ def retriver_questions(result):
     #result=retriever.invoke(question)
     context_text= "\n".join([doc.page_content for doc in result])
     return context_text
+
