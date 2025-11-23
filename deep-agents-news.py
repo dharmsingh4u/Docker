@@ -10,16 +10,18 @@ from langgraph.graph import StateGraph,START, END,MessagesState
 from typing import TypedDict,Annotated,Literal
 import os 
 import sys
-sys.path.insert(1, r'D:\Notebooks\LLM\env')
+import dotenv
+dotenv.load_dotenv()
+#sys.path.insert(1, r'D:\Notebooks\LLM\env')
 #sys.path.insert(2, r'D:\Notebooks\LLM\langchain_document_loader')
-from enviorment import load_env
+#from enviorment import load_env
 from langgraph.prebuilt import ToolNode,tools_condition
 from langchain_core.tools import tool
 #from pydirectoryloader import rag_function
 import os 
-load_env()
-TAVILY_API_KEY=os.getenv('TAVILY_API_KEY')
-print ('api key ',TAVILY_API_KEY)
+#load_env()
+#TAVILY_API_KEY=os.getenv('TAVILY_API_KEY')
+#print ('api key ',TAVILY_API_KEY)
 from langchain_community.tools.tavily_search import TavilySearchResults
 
 from langchain_community.document_loaders import WebBaseLoader
@@ -208,4 +210,5 @@ if input:
       with st.chat_message('user'):
         st.text(input)
       st.session_state['message_history'].append({'role':'user','content':input})
+
       asyncio.run(main())
