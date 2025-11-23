@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+
+    "airbnb": {
+ 
+      "command": "npx",
+      "args": ["-y", "@openbnb/mcp-server-airbnb","--ignore-robots-txt"],
+      "transport": "stdio"
+    },
+    
+    "tavily-remote-mcp": {
+      "url": "https://mcp.tavily.com/mcp/?tavilyApiKey=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",
+       "transport": "streamable_http"
+    }}
+}
